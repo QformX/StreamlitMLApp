@@ -17,9 +17,9 @@ from sklearn.pipeline import make_pipeline
 from tensorflow.keras.models import load_model
 from sklearn.metrics import accuracy_score
 
-model_save_path = 'C:/Users/QForm\Desktop/streamlit_ml/models/'
+model_save_path = 'models/'
 
-card_data = pd.read_csv('C:/Users/QForm/Desktop/streamlit_ml/card_transdata.csv')
+card_data = pd.read_csv('card_transdata.csv')
 X = card_data.drop('fraud', axis=1)
 y = card_data['fraud']
 
@@ -188,7 +188,7 @@ def page_ml_prediction():
     # Интерактивный ввод данных, если файл не загружен
     if uploaded_file is None:
         st.subheader("Введите данные для предсказания:")
-        airlines_data = pd.read_csv('C:/Users/QForm/Desktop/streamlit_ml/card_transdata.csv')
+        airlines_data = pd.read_csv('card_transdata.csv')
 
         # Интерактивные поля для ввода данных
         input_data = {}
